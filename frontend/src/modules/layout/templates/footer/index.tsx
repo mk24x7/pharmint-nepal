@@ -26,7 +26,7 @@ export default async function Footer() {
                   className="inline mr-2 h-8 w-8 object-contain"
                 />
                 <span className="font-bold text-white">Pharmint</span>
-                <span className="ml-1 text-accent font-medium">.PH</span>
+                <span className="ml-1 text-accent font-medium">.com.np</span>
               </h1>
             </LocalizedClientLink>
           </div>
@@ -34,7 +34,7 @@ export default async function Footer() {
             {productCategories && productCategories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus text-white">
-                  Categories
+                  श्रेणीहरू
                 </span>
                 <ul
                   className="grid grid-cols-1 gap-2"
@@ -92,7 +92,7 @@ export default async function Footer() {
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus text-white">
-                  Collections
+                  संग्रहहरू
                 </span>
                 <ul
                   className={clx(
@@ -116,14 +116,14 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus text-white">Company</span>
+              <span className="txt-small-plus text-white">कम्पनी</span>
               <ul className="grid grid-cols-1 gap-y-2 text-pharmint-muted txt-small">
                 <li>
                   <LocalizedClientLink
                     href="/about"
                     className="hover:text-accent transition-colors"
                   >
-                    About Us
+                    हाम्रो बारेमा
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -131,7 +131,7 @@ export default async function Footer() {
                     href="/contact"
                     className="hover:text-accent transition-colors"
                   >
-                    Contact Us
+                    सम्पर्क गर्नुहोस्
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -139,7 +139,7 @@ export default async function Footer() {
                     href="/careers"
                     className="hover:text-accent transition-colors"
                   >
-                    Careers
+                    करियर
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -147,7 +147,7 @@ export default async function Footer() {
                     href="/blog"
                     className="hover:text-accent transition-colors"
                   >
-                    Blog
+                    ब्लग
                   </LocalizedClientLink>
                 </li>
               </ul>
@@ -158,14 +158,14 @@ export default async function Footer() {
           <Text className="txt-compact-small">
             © {new Date().getFullYear()}{" "}
             <a 
-              href="https://pharmint.ph" 
+              href="https://pharmint.com.np" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
             >
               Pharmint
             </a>
-            . All rights reserved.
+            । सबै अधिकार सुरक्षित।
           </Text>
         </div>
       </div>

@@ -7,8 +7,8 @@ import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
-  title: "Pharmint B2B Platform",
-  description: "A comprehensive B2B pharmaceutical platform for streamlined procurement and company management.",
+  title: "फार्मिन्ट बी२बी प्लेटफर्म",
+  description: "सुव्यवस्थित खरिद र कम्पनी व्यवस्थापनका लागि एक व्यापक बी२बी औषधि प्लेटफर्म।",
 }
 
 export default async function Home(props: {

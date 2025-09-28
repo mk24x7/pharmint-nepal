@@ -109,7 +109,7 @@ const Hero = () => {
           variant="secondary" 
           className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-accent border border-accent bg-transparent text-sm font-medium tracking-wider uppercase animate-pulse-glow"
         >
-          B2B Platform
+          बी२बी प्लेटफर्म
         </Badge>
 
         {/* Main Heading */}
@@ -128,13 +128,13 @@ const Hero = () => {
               Pharmint
             </Heading>
             <p className="text-2xl sm:text-3xl lg:text-4xl font-medium text-accent tracking-wide">
-              Your trusted pharma partner
+              तपाईंको भरपर्दो औषधि साझेदार
             </p>
           </div>
 
           <p className="text-lg sm:text-xl text-pharmint-muted max-w-2xl mx-auto leading-relaxed">
-            Streamline your pharmaceutical procurement with our comprehensive B2B platform. 
-            Connect suppliers, manage quotes, and scale your business efficiently.
+            हाम्रो व्यापक बी२बी प्लेटफर्मसँग तपाईंको औषधि खरिदलाई सुव्यवस्थित गर्नुहोस्।
+            आपूर्तिकर्ताहरूसँग जोड्नुहोस्, उद्धरणहरू व्यवस्थापन गर्नुहोस्, र तपाईंको व्यवसायलाई कुशलतापूर्वक बढाउनुहोस्।
           </p>
         </div>
 
@@ -146,7 +146,7 @@ const Hero = () => {
               className="bg-accent hover:bg-accent-hover text-white px-8 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 hover:shadow-lg hover:shadow-accent/25 w-full sm:w-auto"
             >
               <HiShoppingCart className="mr-2 w-5 h-5" />
-              Browse Products
+              उत्पादनहरू ब्राउज गर्नुहोस्
             </Button>
           </Link>
           
@@ -157,7 +157,7 @@ const Hero = () => {
               className="border border-pharmint-border bg-background-secondary text-white hover:bg-pharmint-border/20 px-8 py-4 text-lg font-semibold transition-all duration-200 w-full sm:w-auto"
             >
               <HiUserGroup className="mr-2 w-5 h-5" />
-              Create Account
+              खाता सिर्जना गर्नुहोस्
             </Button>
           </Link>
         </div>
@@ -167,33 +167,33 @@ const Hero = () => {
           {[
             {
               icon: <HiShoppingCart className="w-8 h-8 text-accent" />,
-              title: "Bulk Procurement",
-              description: "Order pharmaceutical products in bulk with competitive pricing and streamlined processes"
+              title: "बल्क खरिद",
+              description: "प्रतिस्पर्धी मूल्य निर्धारण र सुव्यवस्थित प्रक्रियाहरूसँग थोक मात्रामा औषधि उत्पादनहरू अर्डर गर्नुहोस्"
             },
             {
               icon: <HiDocumentText className="w-8 h-8 text-accent" />,
-              title: "Custom Quotes",
-              description: "Request tailored quotes for specific needs and manage negotiations seamlessly"
+              title: "अनुकूलित उद्धरणहरू",
+              description: "विशिष्ट आवश्यकताहरूका लागि अनुकूलित उद्धरणहरू अनुरोध गर्नुहोस् र वार्ता निर्बाध रूपमा व्यवस्थापन गर्नुहोस्"
             },
             {
               icon: <HiUserGroup className="w-8 h-8 text-accent" />,
-              title: "Team Management",
-              description: "Control user permissions, spending limits, and approval workflows for your organization"
+              title: "टीम व्यवस्थापन",
+              description: "तपाईंको संस्थाका लागि प्रयोगकर्ता अनुमतिहरू, खर्च सीमाहरू, र अनुमोदन कार्यप्रवाहहरू नियन्त्रण गर्नुहोस्"
             },
             {
               icon: <HiCreditCard className="w-8 h-8 text-accent" />,
-              title: "Flexible Payment",
-              description: "Multiple payment options with credit terms and automated billing for business customers"
+              title: "लचिलो भुक्तानी",
+              description: "व्यापारिक ग्राहकहरूका लागि क्रेडिट सर्तहरू र स्वचालित बिलिङसहित धेरै भुक्तानी विकल्पहरू"
             },
             {
               icon: <HiClipboardList className="w-8 h-8 text-accent" />,
-              title: "Order Tracking",
-              description: "Real-time visibility into your orders from placement to delivery with detailed reporting"
+              title: "अर्डर ट्र्याकिंग",
+              description: "विस्तृत रिपोर्टिङसहित प्लेसमेन्टदेखि डेलिभरीसम्म तपाईंका अर्डरहरूमा वास्तविक समयको दृश्यता"
             },
             {
               icon: <HiShieldCheck className="w-8 h-8 text-accent" />,
-              title: "Compliance Ready",
-              description: "Full regulatory compliance and documentation for pharmaceutical supply chain requirements"
+              title: "अनुपालन तयार",
+              description: "औषधि आपूर्ति श्रृंखला आवश्यकताहरूका लागि पूर्ण नियामक अनुपालन र कागजातहरू"
             }
           ].map((feature, index) => (
             <div key={index} className="group p-6 rounded-lg bg-background-secondary border border-pharmint-border hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">

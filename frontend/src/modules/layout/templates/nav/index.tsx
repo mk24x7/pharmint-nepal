@@ -33,7 +33,7 @@ export default async function Nav() {
                   className="inline mr-2 h-8 w-8 object-contain"
                 />
                 <span className="font-bold text-white">Pharmint</span>
-                <span className="ml-1 text-accent font-medium">.PH</span>
+                <span className="ml-1 text-accent font-medium">.com.np</span>
               </h1>
             </LocalizedClientLink>
           </div>
@@ -51,7 +51,7 @@ export default async function Nav() {
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Account
+                खाता
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -61,7 +61,7 @@ export default async function Nav() {
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                  कार्ट (०)
                 </LocalizedClientLink>
               }
             >
