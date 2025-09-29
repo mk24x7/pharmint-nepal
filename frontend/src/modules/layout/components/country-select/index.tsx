@@ -60,17 +60,17 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
   ]
 
   const options = useMemo(() => {
-    const dynamicOptions = regions
-      ?.map((r) => {
-        return r.countries?.map((c) => ({
-          country: c.iso_2,
-          region: r.id,
-          label: c.display_name,
-        }))
-      })
-      .flat() || []
+    // const dynamicOptions = regions
+    //   ?.map((r) => {
+    //     return r.countries?.map((c) => ({
+    //       country: c.iso_2,
+    //       region: r.id,
+    //       label: c.display_name,
+    //     }))
+    //   })
+    //   .flat() || []
 
-    return [...dynamicOptions, ...additionalCountries]
+    return [...additionalCountries]
       .sort((a, b) => (a?.label ?? "").localeCompare(b?.label ?? ""))
   }, [regions])
 
