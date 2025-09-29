@@ -45,28 +45,28 @@ const Register = ({ setCurrentView }: Props) => {
     if (name === 'email') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
       if (!value) {
-        errors.email = 'Email is required'
+        errors.email = 'इमेल आवश्यक छ'
       } else if (!emailRegex.test(value as string)) {
-        errors.email = 'Please enter a valid email address'
+        errors.email = 'कृपया मान्य इमेल ठेगाना प्रविष्ट गर्नुहोस्'
       }
     }
     
     if (name === 'first_name') {
       if (!value || (value as string).trim().length < 2) {
-        errors.first_name = 'First name must be at least 2 characters'
+        errors.first_name = 'पहिलो नाम कम्तिमा ४ अक्षरको हुनुपर्छ'
       }
     }
     
     if (name === 'password') {
       if (!value) {
-        errors.password = 'Password is required'
+        errors.password = 'पासवर्ड आवश्यक छ'
       } else if ((value as string).length < 8) {
-        errors.password = 'Password must be at least 8 characters'
+        errors.password = 'पासवर्ड कम्तिमा ८ अक्षरको हुनुपर्छ'
       }
     }
     
     if (name === 'terms' && !value) {
-      errors.terms = 'You must accept the terms and conditions'
+      errors.terms = 'तपाइँले नियम र सर्तहरू स्वीकार गर्नुपर्छ'
     }
     
     return errors
@@ -163,16 +163,16 @@ const Register = ({ setCurrentView }: Props) => {
             backgroundClip: 'text'
           }}
         >
-          Join Pharmint
+          फार्मिन्टमा सामेल हुनुहोस्
         </h1>
         <p className="text-lg text-accent font-medium">
-          Create your account - takes less than a minute
+          आफ्नो खाता बनाउनुहोस् - एक मिनेटभन्दा कम समय लाग्छ
         </p>
       </div>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-4">
           <Input
-            label="Email"
+            label="इमेल"
             name="email"
             required
             type="email"
@@ -189,7 +189,7 @@ const Register = ({ setCurrentView }: Props) => {
             </p>
           )}
           <Input
-            label="First name"
+            label="पहिलो नाम"
             name="first_name"
             required
             autoComplete="given-name"
@@ -205,7 +205,7 @@ const Register = ({ setCurrentView }: Props) => {
             </p>
           )}
           <Input
-            label="Password"
+            label="पासवर्ड"
             name="password"
             required
             type="password"
@@ -223,7 +223,7 @@ const Register = ({ setCurrentView }: Props) => {
           )}
           {formData.password && !validationErrors.password && (
             <p className="text-green-500 text-sm -mt-3 mb-1">
-              ✓ Password meets requirements
+              ✓ पासवर्डले आवश्यकताहरू पूरा गर्छ
             </p>
           )}
           {/* Hidden fields for default values */}
@@ -233,7 +233,7 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <div className="bg-background-secondary/50 border border-pharmint-border rounded-lg p-4 mb-4">
           <p className="text-sm text-pharmint-muted">
-            📝 <strong className="text-pharmint-white">Note:</strong> You can complete your full profile (last name, phone, etc.) later in your account settings.
+            📝 <strong className="text-pharmint-white">नोट:</strong> तपाइँले आफ्नो पूर्ण प्रोफाइल (लास्ट नेम, फोन, आदि) पछि आफ्नो खाता सेटिङमा पूरा गर्न सक्नुहुन्छ।
           </p>
         </div>
         <div className="flex items-start gap-3 mb-4">
@@ -260,19 +260,19 @@ const Register = ({ setCurrentView }: Props) => {
             htmlFor="terms-checkbox"
             data-testid="terms-label"
           >
-            I agree to the{" "}
+            म स्वीकार गर्छु{" "}
             <LocalizedClientLink
               href="/content/terms-of-use"
               className="text-accent hover:text-accent-hover underline mx-1"
             >
-              terms and conditions
+              नियम र सर्तहरू
             </LocalizedClientLink>{" "}
-            and{" "}
+            र{" "}
             <LocalizedClientLink
               href="/content/privacy-policy"
               className="text-accent hover:text-accent-hover underline ml-1"
             >
-              privacy policy
+              गोपनीयता नीति
             </LocalizedClientLink>
             .
           </Label>
@@ -289,7 +289,7 @@ const Register = ({ setCurrentView }: Props) => {
             data-testid="register-button"
             disabled={!isValid}
           >
-            Create Account
+            खाता बनाउनुहोस्
           </SubmitButton>
           <button
             type="button"
@@ -297,7 +297,7 @@ const Register = ({ setCurrentView }: Props) => {
             className="w-full h-12 border border-pharmint-border bg-background-secondary text-pharmint-white hover:bg-pharmint-border/20 font-semibold transition-all duration-200 rounded-base"
             data-testid="sign-in-button"
           >
-            Already have an account? Sign In
+            पहिले नै खाता छ? साइन इन गर्नुहोस्
           </button>
         </div>
       </form>

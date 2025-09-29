@@ -9,14 +9,14 @@ const EmptyCartMessage = () => {
         level="h1"
         className="flex flex-row text-3xl-regular gap-x-2 items-baseline text-pharmint-white mb-4"
       >
-        Your Cart is Empty
+        तपाईंको कार्ट खाली छ
       </Heading>
       <Text className="text-base-regular text-pharmint-muted mt-4 mb-8 max-w-[32rem]">
-        You don&apos;t have anything in your cart. Let&apos;s change that - explore our wide selection of pharmaceutical products.
+        तपाईंको कार्टमा केही छैन। आउनुहोस् यसलाई परिवर्तन गरौं - हाम्रो फार्मास्युटिकल उत्पादनहरूको व्यापक श्रृंखला अन्वेषण गर्नुहोस्।
       </Text>
       <div>
         <InteractiveLink href="/store" className="bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-full font-semibold transition-colors duration-200">
-          Explore Products
+          उत्पादनहरू अन्वेषण गर्नुहोस्
         </InteractiveLink>
       </div>
     </div>

@@ -46,7 +46,7 @@ const Addresses = ({
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline text-pharmint-white"
         >
-          Shipping Address
+          ढुवानी ठेगाना
           {!isOpen && <CheckCircleSolid className="text-accent" />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
@@ -56,7 +56,7 @@ const Addresses = ({
               className="text-accent hover:text-accent-hover transition-colors duration-200"
               data-testid="edit-address-button"
             >
-              Edit
+              सम्पादन गर्नुहोस्
             </button>
           </Text>
         )}
@@ -77,14 +77,14 @@ const Addresses = ({
                   level="h2"
                   className="text-3xl-regular gap-x-4 pb-6 pt-8 text-pharmint-white"
                 >
-                  Billing address
+                  बिलिङ ठेगाना
                 </Heading>
 
                 <BillingAddress cart={cart} />
               </div>
             )}
             <SubmitButton className="mt-6" data-testid="submit-address-button">
-              Continue to delivery
+              डेलिभरीमा जानुहोस्
             </SubmitButton>
             <ErrorMessage error={message} data-testid="address-error-message" />
           </div>
@@ -100,7 +100,7 @@ const Addresses = ({
                     data-testid="shipping-address-summary"
                   >
                     <Text className="txt-medium-plus text-pharmint-white mb-1">
-                      Shipping Address
+                      ढुवानी ठेगाना
                     </Text>
                     <Text className="txt-medium text-pharmint-muted">
                       {cart.shipping_address.first_name}{" "}
@@ -124,7 +124,7 @@ const Addresses = ({
                     data-testid="shipping-contact-summary"
                   >
                     <Text className="txt-medium-plus text-pharmint-white mb-1">
-                      Contact
+                      सम्पर्क
                     </Text>
                     <Text className="txt-medium text-pharmint-muted">
                       {cart.shipping_address.phone}
@@ -139,12 +139,12 @@ const Addresses = ({
                     data-testid="billing-address-summary"
                   >
                     <Text className="txt-medium-plus text-pharmint-white mb-1">
-                      Billing Address
+                      बिलिङ ठेगाना
                     </Text>
 
                     {sameAsBilling ? (
                       <Text className="txt-medium text-pharmint-muted">
-                        Billing- and delivery address are the same.
+                        बिलिङ र डेलिभरी ठेगाना एउटै छ।
                       </Text>
                     ) : (
                       <>

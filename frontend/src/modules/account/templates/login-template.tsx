@@ -75,10 +75,10 @@ const LoginTemplate = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
         <div className="absolute bottom-4 small:bottom-8 left-4 small:left-8 right-4 small:right-8">
           <h2 className="text-xl small:text-2xl xsmall:text-3xl font-bold text-pharmint-white mb-1 small:mb-2">
-            Professional Pharmaceutical Platform
+            व्यावसायिक फार्मास्युटिकल प्लेटफर्म
           </h2>
           <p className="text-pharmint-muted text-xs small:text-sm xsmall:text-base">
-            Streamline your procurement processes with our comprehensive B2B solution designed for pharmaceutical professionals.
+            फार्मास्युटिकल पेशेवरहरूका लागि डिजाइन गरिएको हाम्रो व्यापक बी२बी समाधानसँग तपाईंको खरीद प्रक्रियालाई सुव्यवस्थित बनाउनुहोस्।
           </p>
         </div>
       </div>

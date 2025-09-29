@@ -152,14 +152,14 @@ export default function ProductActions({
 
         {/* Quantity Selector */}
         <div className="flex flex-col gap-y-3">
-          <span className="text-sm text-pharmint-white font-medium">Quantity</span>
+          <span className="text-sm text-pharmint-white font-medium">मात्रा</span>
           <div className="flex items-center bg-background-secondary/30 border border-pharmint-border rounded-lg overflow-hidden">
             <button
               onClick={decreaseQuantity}
               disabled={quantity <= 1 || disabled || isAdding}
               className="h-12 px-4 bg-background-secondary/30 border-r border-pharmint-border text-pharmint-white hover:bg-background-secondary/50 hover:text-accent disabled:text-pharmint-muted disabled:cursor-not-allowed disabled:hover:bg-background-secondary/30 disabled:hover:text-pharmint-muted transition-all duration-200 flex items-center justify-center font-medium text-lg"
               type="button"
-              aria-label="Decrease quantity"
+              aria-label="मात्रा घटाउनुहोस्"
             >
               −
             </button>
@@ -171,7 +171,7 @@ export default function ProductActions({
               disabled={disabled || isAdding}
               className="h-12 px-4 bg-background-secondary/30 text-pharmint-white hover:bg-background-secondary/50 hover:text-accent disabled:text-pharmint-muted disabled:cursor-not-allowed disabled:hover:bg-background-secondary/30 disabled:hover:text-pharmint-muted transition-all duration-200 flex items-center justify-center font-medium text-lg"
               type="button"
-              aria-label="Increase quantity"
+              aria-label="मात्रा बढाउनुहोस्"
             >
               +
             </button>
@@ -193,10 +193,10 @@ export default function ProductActions({
           data-testid="add-product-button"
         >
           {!selectedVariant && !options
-            ? "Select variant"
+            ? "भेरियन्ट चयन गर्नुहोस्"
             : !inStock || !isValidVariant
-            ? "Out of stock"
-            : "Add to cart"}
+            ? "स्टक सकियो"
+            : "कार्टमा थप्नुहोस्"}
         </Button>
         <MobileActions
           product={product}

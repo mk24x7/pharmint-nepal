@@ -27,25 +27,25 @@ const Login = ({ setCurrentView }: Props) => {
             backgroundClip: 'text'
           }}
         >
-          Welcome back
+          फर्किएर आउनुभयो
         </h1>
         <p className="text-lg text-accent font-medium">
-          Sign in to your Pharmint account
+          तपाइँको फार्मिन्ट खातामा साइन इन गर्नुहोस्
         </p>
       </div>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-4">
           <Input
-            label="Email"
+            label="इमेल"
             name="email"
             type="email"
-            title="Enter a valid email address."
+            title="मान्य इमेल ठेगाना प्रविष्ट गर्नुहोस्।"
             autoComplete="email"
             required
             data-testid="email-input"
           />
           <Input
-            label="Password"
+            label="पासवर्ड"
             name="password"
             type="password"
             autoComplete="current-password"
@@ -60,7 +60,7 @@ const Login = ({ setCurrentView }: Props) => {
             data-testid="sign-in-button" 
             className="w-full h-12 bg-accent hover:bg-accent-hover text-pharmint-white font-semibold transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
           >
-            Sign In
+            साइन इन
           </SubmitButton>
           <button
             type="button"
@@ -68,7 +68,7 @@ const Login = ({ setCurrentView }: Props) => {
             className="w-full h-12 border border-pharmint-border bg-background-secondary text-pharmint-white hover:bg-pharmint-border/20 font-semibold transition-all duration-200 rounded-base"
             data-testid="register-button"
           >
-            Create New Account
+            नयाँ खाता बनाउनुहोस्
           </button>
         </div>
       </form>

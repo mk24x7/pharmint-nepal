@@ -34,7 +34,7 @@ const Summary = ({ cart, customer }: SummaryProps) => {
   return (
     <div className="flex flex-col gap-y-4">
       <Heading level="h2" className="text-[2rem] leading-[2.75rem] text-pharmint-white">
-        Order Summary
+        अर्डर सारांश
       </Heading>
       <DiscountCode cart={cart} />
       <Divider />
@@ -44,7 +44,7 @@ const Summary = ({ cart, customer }: SummaryProps) => {
         data-testid="checkout-button"
       >
         <Button className="w-full h-10 bg-accent hover:bg-accent-hover text-white border-accent font-semibold">
-          Proceed to Checkout
+          चेकआउटमा जानुहोस्
         </Button>
       </LocalizedClientLink>
       {!!customer && (
@@ -53,7 +53,7 @@ const Summary = ({ cart, customer }: SummaryProps) => {
             className="w-full h-10 bg-secondary hover:bg-secondary/80 text-white border-secondary font-semibold"
             variant="secondary"
           >
-            Request Quote
+            मूल्य निर्धारण अनुरोध
           </Button>
         </RequestQuoteConfirmation>
       )}
@@ -63,7 +63,7 @@ const Summary = ({ cart, customer }: SummaryProps) => {
             className="w-full h-10 bg-secondary hover:bg-secondary/80 text-white border-secondary font-semibold"
             variant="secondary"
           >
-            Request Quote
+            मूल्य निर्धारण अनुरोध
           </Button>
         </RequestQuotePrompt>
       )}
