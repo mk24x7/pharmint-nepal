@@ -103,7 +103,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                         </div>
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Pharmint.PH. All rights
+                        © {new Date().getFullYear()} Pharmint.com.np. All rights
                         reserved.
                       </Text>
                     </div>

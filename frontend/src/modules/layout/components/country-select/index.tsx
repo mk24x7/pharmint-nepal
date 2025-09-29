@@ -19,6 +19,7 @@ type CountryOption = {
   country: string
   region: string
   label: string
+  externalUrl?: string
 }
 
 type CountrySelectProps = {
@@ -37,8 +38,29 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
 
   const { state, close } = toggleState
 
+  const additionalCountries = [
+    {
+      country: "np",
+      region: "external",
+      label: "Nepal",
+      externalUrl: "https://pharmint.com.np"
+    },
+    {
+      country: "ph",
+      region: "external",
+      label: "Philippines",
+      externalUrl: "https://pharmint.ph"
+    },
+    {
+      country: "th",
+      region: "external",
+      label: "Thailand",
+      externalUrl: "https://pharmint.co.th"
+    }
+  ]
+
   const options = useMemo(() => {
-    return regions
+    const dynamicOptions = regions
       ?.map((r) => {
         return r.countries?.map((c) => ({
           country: c.iso_2,
@@ -46,7 +68,9 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
           label: c.display_name,
         }))
       })
-      .flat()
+      .flat() || []
+
+    return [...dynamicOptions, ...additionalCountries]
       .sort((a, b) => (a?.label ?? "").localeCompare(b?.label ?? ""))
   }, [regions])
 
@@ -54,11 +78,19 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
     if (countryCode) {
       const option = options?.find((o) => o?.country === countryCode)
       setCurrent(option)
+    } else {
+      // Default to Nepal for this website
+      const nepalOption = options?.find((o) => o?.country === "np")
+      setCurrent(nepalOption)
     }
   }, [options, countryCode])
 
   const handleChange = (option: CountryOption) => {
-    updateRegion(option.country, currentPath)
+    if (option.externalUrl) {
+      window.location.href = option.externalUrl
+    } else {
+      updateRegion(option.country, currentPath)
+    }
     close()
   }
 
@@ -70,7 +102,7 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
         defaultValue={
           countryCode
             ? options?.find((o) => o?.country === countryCode)
-            : undefined
+            : options?.find((o) => o?.country === "np")
         }
       >
         <ListboxButton className="py-1 w-full text-pharmint-white hover:text-accent transition-colors duration-200">
