@@ -19,12 +19,13 @@ const Login = ({ setCurrentView }: Props) => {
     >
       <div className="mb-2">
         <h1 
-          className="text-4xl small:text-5xl font-bold text-pharmint-white text-left leading-relaxed mb-2"
+          className="text-4xl small:text-5xl font-bold text-pharmint-white text-left mb-2"
           style={{
             background: 'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            backgroundClip: 'text',
+            lineHeight: '2'
           }}
         >
           फर्किएर आउनुभयो
