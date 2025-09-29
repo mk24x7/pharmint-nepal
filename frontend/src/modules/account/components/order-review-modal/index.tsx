@@ -160,11 +160,11 @@ const OrderReviewModal = ({
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <div>
             <Heading level="h2" className="text-xl font-semibold text-gray-900">
-              {submitSuccess ? 'Reviews Submitted!' : `Review Products from Order #${order.display_id}`}
+              {submitSuccess ? 'समीक्षाहरू पेश भयो!' : `अर्डर #${order.display_id} का उत्पादनहरूको समीक्षा गर्नुहोस्`}
             </Heading>
             {!submitSuccess && (
               <Text className="text-sm text-gray-600 mt-1">
-                Step {currentStep + 1} of {reviews.length} • {reviewableProducts.length} products to review
+                चरण {currentStep + 1} / {reviews.length} • {reviewableProducts.length} उत्पादनहरूको समीक्षा गर्नुहोस्
               </Text>
             )}
           </div>
@@ -240,7 +240,7 @@ const OrderReviewModal = ({
                 </div>
                 {currentReview.rating > 0 && (
                   <Text className="text-sm text-gray-600 mt-1">
-                    {currentReview.rating} out of 5 stars
+                    {currentReview.rating} / ५ तारा
                   </Text>
                 )}
               </div>
@@ -248,30 +248,30 @@ const OrderReviewModal = ({
               {/* Title */}
               <div>
                 <Text className="block text-sm font-medium text-gray-700 mb-2">
-                  Review Title (Optional)
+                  समीक्षा शीर्षक (वैकल्पिक)
                 </Text>
                 <input
                   type="text"
                   value={currentReview.title}
                   onChange={(e) => handleInputChange('title', e.target.value)}
-                  placeholder="Summarize your experience..."
+                  placeholder="आफ्नो अनुभवको सारांश दिनुहोस्..."
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent focus:border-accent"
                   maxLength={100}
                 />
                 <Text className="text-xs text-gray-500 mt-1">
-                  {currentReview.title.length}/100 characters
+                  {currentReview.title.length}/100 अक्षरहरू
                 </Text>
               </div>
 
               {/* Content */}
               <div>
                 <Text className="block text-sm font-medium text-gray-700 mb-2">
-                  Your Review <span className="text-red-500">*</span>
+                  तपाइँको समीक्षा <span className="text-red-500">*</span>
                 </Text>
                 <textarea
                   value={currentReview.content}
                   onChange={(e) => handleInputChange('content', e.target.value)}
-                  placeholder="Share your experience with this product..."
+                  placeholder="यस उत्पादनसँग आफ्नो अनुभव साझा गर्नुहोस्..."
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent focus:border-accent resize-none"
                   maxLength={2000}
@@ -303,7 +303,7 @@ const OrderReviewModal = ({
                   disabled={!isCurrentReviewValid}
                   className="min-w-[100px] bg-accent hover:bg-accent-hover text-white"
                 >
-                  Next
+                  अगाडि
                 </Button>
               ) : (
                 <Button
@@ -311,7 +311,7 @@ const OrderReviewModal = ({
                   disabled={!isCurrentReviewValid || isSubmitting}
                   className="min-w-[120px] bg-accent hover:bg-accent-hover text-white"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Reviews'}
+                  {isSubmitting ? 'पेश गर्दै...' : 'समीक्षाहरू पेश गर्नुहोस्'}
                 </Button>
               )}
             </div>

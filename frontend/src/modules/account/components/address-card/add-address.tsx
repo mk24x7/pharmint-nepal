@@ -53,27 +53,27 @@ const AddAddress = ({
         onClick={open}
         data-testid="add-address-button"
       >
-        <span className="text-base-semi text-pharmint-white">New address</span>
+        <span className="text-base-semi text-pharmint-white">नयाँ ठेगाना</span>
         <Plus className="text-accent" />
       </button>
 
       <Modal isOpen={state} close={close} data-testid="add-address-modal">
         <Modal.Title>
-          <Heading className="mb-2">Add address</Heading>
+          <Heading className="mb-2">ठेगाना थप्नुहोस्</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
             <div className="flex flex-col gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
-                  label="First name"
+                  label="पहिलो नाम"
                   name="first_name"
                   required
                   autoComplete="given-name"
                   data-testid="first-name-input"
                 />
                 <Input
-                  label="Last name"
+                  label="अन्तिम नाम"
                   name="last_name"
                   required
                   autoComplete="family-name"
@@ -81,34 +81,34 @@ const AddAddress = ({
                 />
               </div>
               <Input
-                label="Company"
+                label="कम्पनी"
                 name="company"
                 autoComplete="organization"
                 data-testid="company-input"
               />
               <Input
-                label="Address"
+                label="ठेगाना"
                 name="address_1"
                 required
                 autoComplete="address-line1"
                 data-testid="address-1-input"
               />
               <Input
-                label="Apartment, suite, etc."
+                label="अपार्टमेन्ट, सूट, आदि।"
                 name="address_2"
                 autoComplete="address-line2"
                 data-testid="address-2-input"
               />
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
                 <Input
-                  label="Postal code"
+                  label="हुलाक कोड"
                   name="postal_code"
                   required
                   autoComplete="postal-code"
                   data-testid="postal-code-input"
                 />
                 <Input
-                  label="City"
+                  label="शहर"
                   name="city"
                   required
                   autoComplete="locality"
@@ -116,7 +116,7 @@ const AddAddress = ({
                 />
               </div>
               <Input
-                label="Province / State"
+                label="प्रदेश / राज्य"
                 name="province"
                 autoComplete="address-level1"
                 data-testid="state-input"
@@ -129,7 +129,7 @@ const AddAddress = ({
                 data-testid="country-select"
               />
               <Input
-                label="Phone"
+                label="फोन"
                 name="phone"
                 autoComplete="phone"
                 data-testid="phone-input"
@@ -153,9 +153,9 @@ const AddAddress = ({
                 className="h-10"
                 data-testid="cancel-button"
               >
-                Cancel
+                रद्द गर्नुहोस्
               </Button>
-              <SubmitButton data-testid="save-button">Save</SubmitButton>
+              <SubmitButton data-testid="save-button">सुरक्षित गर्नुहोस्</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

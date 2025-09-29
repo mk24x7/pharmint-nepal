@@ -249,8 +249,8 @@ const QuoteDetails: React.FC<QuoteDetailsProps> = ({
         {quote.status === "pending_customer" && (
           <div className="flex gap-x-3 justify-end my-4">
             <PromptModal
-              title="Reject Quote?"
-              description="Are you sure you want to reject quote? This action is irreversible."
+              title="कोटेसन अस्वीकार गर्ने?"
+              description="के तपाईं निश्चित हुनुहुन्छ कि कोटेसन अस्वीकार गर्न चाहनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।"
               handleAction={() => {
                 setIsRejecting(true)
 
@@ -261,13 +261,13 @@ const QuoteDetails: React.FC<QuoteDetailsProps> = ({
               isLoading={isRejecting}
             >
               <Button size="small" variant="secondary">
-                Reject Quote
+                कोटेसन अस्वीकार गर्नुहोस्
               </Button>
             </PromptModal>
 
             <PromptModal
-              title="Accept Quote?"
-              description="Are you sure you want to accept quote? This action is irreversible."
+              title="कोटेसन स्वीकार गर्ने?"
+              description="के तपाईं निश्चित हुनुहुन्छ कि कोटेसन स्वीकार गर्न चाहनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।"
               handleAction={() => {
                 setIsAccepting(true)
 
@@ -278,7 +278,7 @@ const QuoteDetails: React.FC<QuoteDetailsProps> = ({
               isLoading={isAccepting}
             >
               <Button size="small" variant="primary">
-                Accept Quote
+                कोटेसन स्वीकार गर्नुहोस्
               </Button>
             </PromptModal>
           </div>

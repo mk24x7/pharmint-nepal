@@ -228,7 +228,7 @@ const SearchBar = () => {
               value={searchQuery}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="Search medicines, vitamins, or health products..."
+              placeholder="औषधि, भिटामिन, वा स्वास्थ्य उत्पादनहरू खोज्नुहोस्..."
               className="flex-1 bg-transparent text-pharmint-white placeholder-pharmint-muted focus:outline-none text-lg"
               autoFocus
             />
@@ -246,22 +246,22 @@ const SearchBar = () => {
           <div ref={resultsRef} className="max-h-96 overflow-y-auto">
             {isLoading && (
               <div className="px-4 py-8 text-center text-pharmint-muted">
-                Searching...
+                खोजिरहेको...
               </div>
             )}
 
             {!isLoading && searchQuery && results.length === 0 && (
               <div className="px-4 py-8 text-center text-pharmint-muted">
-                No products found for "{searchQuery}"
+                "{searchQuery}" का लागि कुनै उत्पादन फेला परेन
               </div>
             )}
 
             {!searchQuery && !isLoading && (
               <div className="px-4 py-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-sm font-medium text-pharmint-white">Popular Searches</h3>
+                  <h3 className="text-sm font-medium text-pharmint-white">लोकप्रिय खोजीहरू</h3>
                   <div className="text-xs text-pharmint-muted">
-                    {isMac ? '⌘K' : 'Ctrl+K'} to search
+                    {isMac ? '⌘K' : 'Ctrl+K'} खोज्न
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">

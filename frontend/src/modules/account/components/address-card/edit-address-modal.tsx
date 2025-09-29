@@ -108,7 +108,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             data-testid="address-edit-button"
           >
             <Edit />
-            Edit
+            सम्पादन गर्नुहोस्
           </button>
           <button
             className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
@@ -116,14 +116,14 @@ const EditAddress: React.FC<EditAddressProps> = ({
             data-testid="address-delete-button"
           >
             {removing ? <Spinner /> : <Trash />}
-            Remove
+            हटाउनुहोस्
           </button>
         </div>
       </div>
 
       <Modal isOpen={state} close={close} data-testid="edit-address-modal">
         <Modal.Title>
-          <Heading className="mb-2">Edit address</Heading>
+          <Heading className="mb-2">ठेगाना सम्पादन गर्नुहोस्</Heading>
         </Modal.Title>
         <form action={formAction}>
           <input type="hidden" name="addressId" value={address.id} />
@@ -131,7 +131,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             <div className="grid grid-cols-1 gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
-                  label="First name"
+                  label="पहिलो नाम"
                   name="first_name"
                   required
                   autoComplete="given-name"
@@ -139,7 +139,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                   data-testid="first-name-input"
                 />
                 <Input
-                  label="Last name"
+                  label="अन्तिम नाम"
                   name="last_name"
                   required
                   autoComplete="family-name"
@@ -148,14 +148,14 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 />
               </div>
               <Input
-                label="Company"
+                label="कम्पनी"
                 name="company"
                 autoComplete="organization"
                 defaultValue={address.company || undefined}
                 data-testid="company-input"
               />
               <Input
-                label="Address"
+                label="ठेगाना"
                 name="address_1"
                 required
                 autoComplete="address-line1"
@@ -163,7 +163,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 data-testid="address-1-input"
               />
               <Input
-                label="Apartment, suite, etc."
+                label="अपार्टमेन्ट, सूट, आदि।"
                 name="address_2"
                 autoComplete="address-line2"
                 defaultValue={address.address_2 || undefined}
@@ -171,7 +171,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
                 <Input
-                  label="Postal code"
+                  label="हुलाक कोड"
                   name="postal_code"
                   required
                   autoComplete="postal-code"
@@ -179,7 +179,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                   data-testid="postal-code-input"
                 />
                 <Input
-                  label="City"
+                  label="शहर"
                   name="city"
                   required
                   autoComplete="locality"
@@ -188,7 +188,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 />
               </div>
               <Input
-                label="Province / State"
+                label="प्रदेश / राज्य"
                 name="province"
                 autoComplete="address-level1"
                 defaultValue={address.province || undefined}
@@ -203,7 +203,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 data-testid="country-select"
               />
               <Input
-                label="Phone"
+                label="फोन"
                 name="phone"
                 autoComplete="phone"
                 defaultValue={address.phone || undefined}
@@ -225,9 +225,9 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 className="h-10"
                 data-testid="cancel-button"
               >
-                Cancel
+                रद्द गर्नुहोस्
               </Button>
-              <SubmitButton data-testid="save-button">Save</SubmitButton>
+              <SubmitButton data-testid="save-button">सुरक्षित गर्नुहोस्</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

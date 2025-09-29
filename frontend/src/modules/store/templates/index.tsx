@@ -29,7 +29,7 @@ const StoreTemplate = ({
         </div>
         <div className="w-full">
           <div className="mb-8 text-2xl-semi">
-            <h1 className="text-pharmint-white" data-testid="store-page-title">All Products</h1>
+            <h1 className="text-pharmint-white" data-testid="store-page-title">सबै उत्पादनहरू</h1>
           </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts

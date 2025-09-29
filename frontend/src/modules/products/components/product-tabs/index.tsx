@@ -14,11 +14,11 @@ type ProductTabsProps = {
 const ProductTabs = ({ product }: ProductTabsProps) => {
   const tabs = [
     {
-      label: "Product Information",
+      label: "उत्पादन जानकारी",
       component: <ProductInfoTab product={product} />,
     },
     {
-      label: "Shipping & Returns",
+      label: "ढुवानी र फिर्ता",
       component: <ShippingInfoTab />,
     },
   ]
@@ -47,25 +47,25 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
       <div className="grid grid-cols-2 gap-x-8">
         <div className="flex flex-col gap-y-4">
           <div>
-            <span className="font-semibold text-pharmint-white">Material</span>
+            <span className="font-semibold text-pharmint-white">सामग्री</span>
             <p className="text-pharmint-muted">{product.material ? product.material : "-"}</p>
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white">Country of origin</span>
+            <span className="font-semibold text-pharmint-white">मूल देश</span>
             <p className="text-pharmint-muted">{product.origin_country ? product.origin_country : "-"}</p>
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white">Type</span>
+            <span className="font-semibold text-pharmint-white">प्रकार</span>
             <p className="text-pharmint-muted">{product.type ? product.type.value : "-"}</p>
           </div>
         </div>
         <div className="flex flex-col gap-y-4">
           <div>
-            <span className="font-semibold text-pharmint-white">Weight</span>
+            <span className="font-semibold text-pharmint-white">तौल</span>
             <p className="text-pharmint-muted">{product.weight ? `${product.weight} g` : "-"}</p>
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white">Dimensions</span>
+            <span className="font-semibold text-pharmint-white">आयाम</span>
             <p className="text-pharmint-muted">
               {product.length && product.width && product.height
                 ? `${product.length}L x ${product.width}W x ${product.height}H`
@@ -87,10 +87,10 @@ const ShippingInfoTab = () => {
             <FastDelivery />
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white block mb-2">Fast delivery</span>
+            <span className="font-semibold text-pharmint-white block mb-2">छिटो डेलिभरी</span>
             <p className="max-w-sm text-pharmint-muted leading-relaxed">
-              Your pharmaceutical products will arrive in 3-5 business days at your pick up
-              location or safely delivered to your home.
+              तपाईंका फार्मास्युटिकल उत्पादनहरू ३-५ कार्यदिवसमा तपाईंको
+              पिकअप स्थानमा वा घरमा सुरक्षित रूपमा पुग्नेछ।
             </p>
           </div>
         </div>
@@ -99,10 +99,10 @@ const ShippingInfoTab = () => {
             <Refresh />
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white block mb-2">Quality assurance</span>
+            <span className="font-semibold text-pharmint-white block mb-2">गुणस्तर नियन्त्रण</span>
             <p className="max-w-sm text-pharmint-muted leading-relaxed">
-              All our pharmaceutical products are sourced from certified suppliers
-              and undergo strict quality checks before dispatch.
+              हाम्रा सबै फार्मास्युटिकल उत्पादनहरू प्रमाणित
+              आपूर्तिकर्ताहरूबाट आउँछन् र पठाउनु अघि कडा गुणस्तर जाँच गरिन्छ।
             </p>
           </div>
         </div>
@@ -111,10 +111,10 @@ const ShippingInfoTab = () => {
             <Back />
           </div>
           <div>
-            <span className="font-semibold text-pharmint-white block mb-2">Easy returns</span>
+            <span className="font-semibold text-pharmint-white block mb-2">सजिलो फिर्ता</span>
             <p className="max-w-sm text-pharmint-muted leading-relaxed">
-              Unopened products can be returned within 30 days for a full refund.
-              We prioritize your satisfaction and product safety.
+              नखोलिएका उत्पादनहरू ३० दिनभित्र पूर्ण पैसा फिर्ताका लागि
+              फिर्ता गर्न सकिन्छ। हामी तपाईंको सन्तुष्टि र उत्पादन सुरक्षालाई प्राथमिकता दिन्छौं।
             </p>
           </div>
         </div>
